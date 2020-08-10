@@ -1,3 +1,13 @@
 node_modules
 .env
 
+/coverage
+.nyc_output
+.nyc_output/*
+cypress/results
+mochawesome.json
+mochawesome-report
+test-results.xml
+cypress/videos
+cypress/screenshots
+

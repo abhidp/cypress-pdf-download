@@ -4,6 +4,7 @@ Instructions:
 - clone this repo : `git clone https://github.com/abhidp/cypress-pdf-download.git`
 - install dependencies: `npm install`
 - open Cypress runner : `npm run cy:open`
+- choose Chrome as the browser
 - execute test : `pdfExport.spec.js`
 - `Test#1` and `Test#3` will pass
 - `Test#2` will fail because the downloaded PDF file is blank which is what this issue is all about
@@ -21,6 +22,9 @@ Expected Result: Cypress should download the same PDF as downloaded manually
 Replication steps to download the PDF manually:
 - navigate to the above url
 - click on the Kebab menu (three vertical dots) at the top right corner of the page
+  
+  <img src="cypress/downloads/kebabMenu.jpg"  width="200">
+
 - click on `Export as PDF` option and save it to your local disk
 
 

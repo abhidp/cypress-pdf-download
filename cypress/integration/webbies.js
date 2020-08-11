@@ -1,12 +1,13 @@
 describe('Validate PDF export feature', () => {
   before('Clear old SlypReceipt.pdf files from downloads folder', () => {
     cy.exec('rm cypress/downloads/SlypReceipt.pdf', { log: true, failOnNonZeroExit: false });
+    cy.visit('https://receipts.uat-slyp.com.au/WRA-ba8511d6f86fcd488cc335a356ccadd2d37f1c30');
   });
 
   it('Test#1 Should open action modal when clicked on kebab menu', () => {
-    cy.get('KebabMenu').should('be.visible').click();
-    cy.get('ExportPdfButton').should('be.visible');
-    cy.get('ExportPdfButton').scrollIntoView().click();
+    cy.get('[data-test="KebabMenu"]').should('be.visible').click();
+    cy.get('[data-test="ExportPdfButton"]').should('be.visible');
+    cy.get('[data-test="ExportPdfButton"]').scrollIntoView().click();
     cy.task('isExistPDF', 'SlypReceipt.pdf').should('equal', true);
   });
 

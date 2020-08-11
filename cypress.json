@@ -1,5 +1,4 @@
 {
-  "baseUrl": "https://receipts.uat-slyp.com.au",
   "env": {
     "webReceiptId": "WRA-ba8511d6f86fcd488cc335a356ccadd2d37f1c30"
   },
@@ -8,7 +7,7 @@
   "viewportWidth": 1000,
   "execTimeout": 10000,
   "taskTimeout": 10000,
-  "pageLoadTimeout": 10000,
+  "pageLoadTimeout": 60000,
   "responseTimeout": 10000,
   "video": true,
   "videoUploadOnPasses": true,
